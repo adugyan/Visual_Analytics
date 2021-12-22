@@ -1,0 +1,20 @@
+{
+    "heatmap": {
+        "rgb-cool": "#230050",
+        "rgb-hot": "#ef301f",
+        "rgb-hover": "#afafaf",
+        "rgb-select": "#fa5f5f"
+    },
+    "control-panel": {
+        "rgb-background": "#e4d8c0"
+    },
+    "document-panel": {
+        "rgb-cool": "#230050",
+        "rgb-hot": "#ef301f",
+        "rgb-hover": "#afafaf",
+        "rgb-select": "#5f5ffa"
+    },
+    "settings": {
+        "score_threshold": 0.1
+    }
+}

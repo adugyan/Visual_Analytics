@@ -1,0 +1,167 @@
+.app-area {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ui-controlgroup > button.ui-button,
+.ui-controlgroup > .ui-controlgroup-label {
+    text-align: center;
+}
+
+.search-panel {
+    float: left;
+    padding: 8px;
+}
+
+.search-select-panel {
+    height: 215px;
+}
+
+SELECT {
+    width: 205;
+}
+
+SECTION > DIV {
+    float: left;
+    padding: 4px;
+}
+
+.lr-btn-panel {
+    padding-top: 85px;
+}
+
+.Table {
+    display: table;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Row {
+    display: table-row;
+}
+.Cell {
+    display: table-cell;
+}
+.LabelCell {
+    display: table-cell;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.HeaderCell {
+    display: table-cell;
+    text-align: center;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 60px;
+}
+.ValCell {
+    display: table-cell;
+    text-align: center;
+    border-top: solid;
+    background-color: whitesmoke;
+    border-width: 1px 1px 1px 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 60px;
+}
+.doc-column-header {
+    display: table-cell;
+    text-align: left;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.doc-column-date {
+    text-align: left;
+    display: table-cell;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: whitesmoke;
+}
+.doc-column-score {
+    text-align: right;
+    display: table-cell;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: whitesmoke;
+}
+.document-panel {
+    padding-top: 8px;
+}
+
+.doc-panel-section {
+    width: 270px;
+    height: 310px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    overflow-y: scroll;
+}
+
+.doc-toggle-ctrl {
+    width: 270px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 8px;
+}
+
+.ctrl-update {
+    text-align: center;
+    margin-top: 2px;
+}
+
+/* Modal dialog */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}  
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Named elements */
+
+#entity-selector, #entity-selected {
+    height: 175px;
+}
+
+#document-selector {
+    width: 260px;
+}
+
+#doc-selector-header {
+    width: 285px;
+}
