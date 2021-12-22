@@ -1,0 +1,82 @@
+\documentclass{vgtc}                          % final (conference style)
+
+%% These few lines make a distinction between latex and pdflatex calls and they
+%% bring in essential packages for graphics and font handling.
+%% Note that due to the \DeclareGraphicsExtensions{} call it is no longer necessary
+%% to provide the the path and extension of a graphics file:
+%% \includegraphics{diamondrule} is completely sufficient.
+%%
+\ifpdf%                                % if we use pdflatex
+	\pdfoutput=1\relax                   % create PDFs from pdfLaTeX
+	\pdfcompresslevel=9                  % PDF Compression
+	\pdfoptionpdfminorversion=7          % create PDF 1.7
+	\ExecuteOptions{pdftex}
+	\usepackage{graphicx}                % allow us to embed graphics files
+	\DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg} % for pdflatex we expect .pdf, .png, or .jpg files
+\else%                                 % else we use pure latex
+	\ExecuteOptions{dvips}
+	\usepackage{graphicx}                % allow us to embed graphics files
+	\DeclareGraphicsExtensions{.eps}     % for pure latex we expect eps files
+\fi%
+
+%% it is recomended to use ``\autoref{sec:bla}'' instead of ``Fig.~\ref{sec:bla}''
+\graphicspath{{figures/}{pictures/}{images/}{./}} % where to search for the images
+
+\usepackage{microtype}                 % use micro-typography (slightly more compact, better to read)
+\PassOptionsToPackage{warn}{textcomp}  % to address font issues with \textrightarrow
+\usepackage{textcomp}                  % use better special symbols
+\usepackage{mathptmx}                  % use matching math font
+\usepackage{times}                     % we use Times as the main font
+\renewcommand*\ttdefault{txtt}         % a nicer typewriter font
+\usepackage{cite}                      % needed to automatically sort the references
+\usepackage{tabu}                      % only used for the table example
+\usepackage{booktabs}                  % only used for the table example
+\usepackage{multicol}                  % allows multi-column spanning figures
+%% We encourage the use of mathptmx for consistent usage of times font
+%% throughout the proceedings. However, if you encounter conflicts
+%% with other math-related packages, you may want to disable it.
+
+
+%% If you are submitting a paper to a conference for review with a double
+%% blind reviewing process, please replace the value ``0'' below with your
+%% OnlineID. Otherwise, you may safely leave it at ``0''.
+\onlineid{0}
+
+%% declare the category of your paper, only shown in review mode
+\vgtccategory{Research}
+
+%% allow for this line if you want the electronic option to work properly
+%\vgtcinsertpkg
+
+%% In preprint mode you may define your own headline.
+%\preprinttext{To appear in an IEEE VGTC sponsored conference.}
+
+\title{An Exploration of Visualization for Missing Data}
+
+%% Author and Affiliation (multiple authors with multiple affiliations)
+\author{Joshua Boley\thanks{e-mail: jboley2@niu.edu}\\ %
+	\scriptsize Northern Illinois University %
+\and Kofi Adu-Gyan\thanks{e-mail: z1723260@students.niu.edu}\\ %
+	\scriptsize Northern Illinois University} %
+
+\abstract{The problem of missing data is both ubiquitous and pernicious. It affects nearly all multivariate data sets of substantial size and contributes to bias and uncertainty in visualizations and analysis alike. Unlike other sources of uncertainty, adding more data does not reduce uncertainty as the new data often contains more missing values. Many implementations of machine and statistical learning algorithms do not handle missing values well if at all, requiring simulation of missing values to complete the data through imputation. However, an incomplete understanding of the patterns of missingness in the data may lead to an incorrect approach to imputation, resulting in unreliable analyses and incorrect models.
+
+Statistical assessments of missing values can only take the analyst so far, as many subtle but important structures in the missingness of data cannot be revealed or explained through purely statistical means. Visualizations of missing data are well-placed to aid the analyst in finding hidden structure and correlations to help explain how and why data is missing. In this paper we first examine the case for using visualizations and visual analytics tools to explore structures of missing data, how they can help the analyst gain important insights and why they are ultimately necessary to both effectively and efficiently diagnose, through both visualization and analysis, the underlying mechanisms that lead to missing values. We then address issues of designing intelligent visual analytics system to aid the analyst in diagnosing and understanding sources of missing data.}
+
+\begin{document}
+
+\firstsection{Introduction}
+
+\maketitle
+
+\input{sections/1-intro.tex}
+\input{sections/2-mechanisms.tex}
+\input{sections/3-measures.tex}
+\input{sections/4-Transparancy.tex}
+\input{sections/5-Interactivity.tex}
+\input{sections/6-Conclusion.tex}
+
+\bibliographystyle{abbrv-doi}
+\bibliography{refs}
+
+\end{document}

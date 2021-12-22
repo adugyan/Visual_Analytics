@@ -1,0 +1,7 @@
+# Ignore tex compilation artifact files
+*.aux
+*.bbl
+*.blg
+*.log
+*.synctex.gz
+*.pdf
